@@ -1,0 +1,15 @@
+.item {
+  width: 240px;
+  background: #ffffff;
+
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+  border-radius: 4px;
+}
+.item__imgWrapper {
+  height: 168px;
+  width: 100%;
+  overflow: hidden;
+}
+.item__img {
+}
