@@ -1,4 +1,14 @@
 .logo {
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+  max-height: 104px;
+  width: 312px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-bottom: 16px;
+    max-height: 200px;
+    width: 600px;
+  }
 }

@@ -1,0 +1,14 @@
+.characterPage {
+  width: 312px;
+  margin: 0 auto;
+  padding-top: 124px;
+  padding-bottom: 85px;
+}
+
+@media screen and (min-width: 768px) {
+  .characterPage {
+    width: 413px;
+    padding-top: 76px;
+    padding-bottom: 142px;
+  }
+}

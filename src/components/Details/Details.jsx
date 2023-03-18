@@ -1,3 +1,4 @@
+import css from './Details.module.css';
 export const Details = ({
   name,
   gender,
@@ -8,32 +9,34 @@ export const Details = ({
   image,
 }) => {
   return (
-    <div>
-      <img src={image} alt={name} />
-      <h2>{name}</h2>
-      <h3>Informations</h3>
-      <ul>
-        <li>
-          <p>Gender</p>
-          <p>{gender}</p>
+    <>
+      <div className={css.imgWrapper}>
+        <img src={image} alt={name} />
+      </div>
+      <h2 className={css.name}>{name}</h2>
+      <h3 className={css.title}>Informations</h3>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <p className={css.subtitle}>Gender</p>
+          <p className={css.descr}>{gender}</p>
         </li>
-        <li>
-          <p>Status</p>
-          <p>{status}</p>
+        <li className={css.item}>
+          <p className={css.subtitle}>Status</p>
+          <p className={css.descr}>{status}</p>
         </li>
-        <li>
-          <p>Specie</p>
-          <p>{species}</p>
+        <li className={css.item}>
+          <p className={css.subtitle}>Specie</p>
+          <p className={css.descr}>{species}</p>
         </li>
-        <li>
-          <p>Origin</p>
-          <p>{origin.name}</p>
+        <li className={css.item}>
+          <p className={css.subtitle}>Origin</p>
+          <p className={css.descr}>{origin.name}</p>
         </li>
-        <li>
-          <p>Type</p>
-          <p>{type}</p>
+        <li className={css.item}>
+          <p className={css.subtitle}>Type</p>
+          <p className={css.descr}>{type ? type : 'unknown'}</p>
         </li>
       </ul>
-    </div>
+    </>
   );
 };

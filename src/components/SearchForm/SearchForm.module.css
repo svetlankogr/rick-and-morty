@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 8px;
+  margin-bottom: 32px;
+  height: 56px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.btnSearch {
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  background-image: url('../../images/icon_search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    margin-bottom: 61px;
+  }
+}

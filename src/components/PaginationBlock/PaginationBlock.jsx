@@ -8,6 +8,9 @@ export const PaginationBlock = ({ pageCount, page, onChange }) => {
       onChange={onChange}
       variant="outlined"
       color="primary"
+      siblingCount={0}
+      boundaryCount={1}
+      sx={{ display: 'flex', justifyContent: 'center' }}
     />
   );
 };

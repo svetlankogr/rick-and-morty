@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getCharacterById } from 'services/api';
 import { Details } from 'components/Details/Details';
-// import css from './MovieDetails.module.css';
+import { GoBack } from 'components/GoBack/GoBack';
+import css from './CharacterDetails.module.css';
 
 const CharacterDetails = () => {
-  const location = useLocation();
-
   const { idCharacter } = useParams();
 
   const [character, setCharacter] = useState(null);
@@ -21,8 +20,8 @@ const CharacterDetails = () => {
 
   const { name, gender, species, status, origin, type, image } = character;
   return (
-    <>
-      <Link to={location.state?.from ?? '/'}>Go back</Link>
+    <div className={css.characterPage}>
+      <GoBack />
       <Details
         name={name}
         gender={gender}
@@ -32,7 +31,7 @@ const CharacterDetails = () => {
         type={type}
         image={image}
       />
-    </>
+    </div>
   );
 };
 
