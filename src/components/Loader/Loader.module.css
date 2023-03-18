@@ -30,7 +30,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgb(114, 13, 203);
+  background: rgb(13, 79, 203);
   margin: -4px 0 0 -4px;
 }
 .loader div:nth-child(1) {
