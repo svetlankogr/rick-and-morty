@@ -4,14 +4,6 @@ const rickAndMortyApi = axios.create({
   baseURL: 'https://rickandmortyapi.com/api',
 });
 
-export const getCharacters = async page => {
-  const { data } = await rickAndMortyApi.get('/character', {
-    params: {
-      page,
-    },
-  });
-  return data;
-};
 export const getCharacterByQuery = async (query, page) => {
   const { data } = await rickAndMortyApi.get('/character', {
     params: {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { getCharacters, getCharacterByQuery } from 'services/api';
+import { getCharacterByQuery } from 'services/api';
 import { CharacterList } from 'components/CharacterList/CharacterList';
 import { Logo } from 'components/Logo/Logo';
 import { SearchForm } from 'components/SearchForm/SearchForm';
@@ -21,16 +21,6 @@ const Characters = () => {
 
   useEffect(() => {
     setLoading(true);
-    if (!characterName) {
-      getCharacters(page)
-        .then(({ results, info }) => {
-          setCharacters(results);
-          setPageCount(info.pages);
-        })
-        .catch(error => setError(error.message))
-        .finally(() => setLoading(false), setError(null));
-      return;
-    }
     getCharacterByQuery(characterName, page)
       .then(({ results, info }) => {
         setCharacters(results);
