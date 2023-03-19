@@ -10,4 +10,4 @@ The application implements:
 6) Loader.
 7) PropTypes.
 
-Welcome to [LivePage](https://github.com/svetlankogr/rick-and-morty)
+Welcome to [LivePage]([https://github.com/svetlankogr/rick-and-morty](https://svetlankogr.github.io/rick-and-morty/))
