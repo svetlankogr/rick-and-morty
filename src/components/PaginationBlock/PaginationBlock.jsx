@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Pagination } from '@mui/material';
 
 export const PaginationBlock = ({ pageCount, page, onChange }) => {
@@ -13,4 +14,9 @@ export const PaginationBlock = ({ pageCount, page, onChange }) => {
       sx={{ display: 'flex', justifyContent: 'center' }}
     />
   );
+};
+PaginationBlock.propTypes = {
+  onChange: PropTypes.func,
+  page: PropTypes.number,
+  pageCount: PropTypes.number,
 };

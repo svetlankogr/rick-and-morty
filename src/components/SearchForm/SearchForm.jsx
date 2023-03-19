@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './SearchForm.module.css';
 export const SearchForm = ({ onFormSubmit, onChange, searchQuery }) => {
   return (
@@ -15,4 +16,9 @@ export const SearchForm = ({ onFormSubmit, onChange, searchQuery }) => {
       />
     </form>
   );
+};
+SearchForm.propTypes = {
+  onFormSubmit: PropTypes.func,
+  onChange: PropTypes.func,
+  pagsearchQueryeCount: PropTypes.string,
 };

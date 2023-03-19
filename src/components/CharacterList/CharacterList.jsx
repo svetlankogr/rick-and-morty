@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { CharacterItem } from 'components/CharacterItem/CharacterItem';
 import css from './CharacterList.module.css';
 
@@ -23,6 +23,6 @@ export const CharacterList = ({ characters }) => {
   );
 };
 
-// MovieList.propTypes = {
-//   movies: PropTypes.arrayOf(PropTypes.object),
-// };
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.object),
+};

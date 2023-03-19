@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Details.module.css';
 export const Details = ({
   name,
@@ -39,4 +40,13 @@ export const Details = ({
       </ul>
     </>
   );
+};
+
+Details.propTypes = {
+  name: PropTypes.string,
+  species: PropTypes.string,
+  image: PropTypes.string,
+  status: PropTypes.string,
+  origin: PropTypes.object,
+  type: PropTypes.string,
 };
