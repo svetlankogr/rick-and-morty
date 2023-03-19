@@ -57,12 +57,22 @@ const Characters = () => {
           onFormSubmit={onFormSubmit}
           onChange={onChange}
         />
-        {error ? <p>{error}</p> : <CharacterList characters={characters} />}
-        <PaginationBlock
-          pageCount={pageCount}
-          page={page}
-          onChange={onChangePage}
-        />
+        {error ? (
+          <p className={css.error}>
+            The character was not found. Enter the correct name.
+          </p>
+        ) : (
+          <CharacterList characters={characters} />
+        )}
+        {error ? (
+          ''
+        ) : (
+          <PaginationBlock
+            pageCount={pageCount}
+            page={page}
+            onChange={onChangePage}
+          />
+        )}
       </div>
     </>
   );
