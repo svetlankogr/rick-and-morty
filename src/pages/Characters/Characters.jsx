@@ -6,6 +6,7 @@ import { Logo } from 'components/Logo/Logo';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { PaginationBlock } from 'components/PaginationBlock/PaginationBlock';
 import { Loader } from 'components/Loader/Loader';
+import { BtnUp } from 'components/BtnUp/BtnUp';
 
 import css from './Characters.module.css';
 const Characters = () => {
@@ -73,6 +74,8 @@ const Characters = () => {
             onChange={onChangePage}
           />
         )}
+
+        <BtnUp />
       </div>
     </>
   );
